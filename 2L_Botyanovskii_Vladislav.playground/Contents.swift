@@ -2,34 +2,31 @@ import UIKit
 
 // Lesson 1. Написать функцию, которая определяет, четное число или нет.
 // Вариант 1.
-let number = 201
-func difinitionNumber() {
-    if number == 0  {
-        print("Ваше число 0! Оно натуральное!")
-    }
-    else if number % 2 == 0 {
-        print("Ваше число \(number), оно четное!")
+
+func isEven(number: Int) -> Bool{
+    if number % 2 == 0 {
+        return true
     }
     else {
-        print("Ваше число \(number), оно не четное!")
+        return false
     }
 }
-difinitionNumber()
+isEven(number: 201)
 // Вариант 2.
  
 // Lesson 2. Написать функцию, которая определяет, делится ли число без остатка на 3.
 // Вариант 1.
-let x = 3
-func divisionWithoutRemainded(){
+
+func isDividedByThree(x: Int) ->Bool{
     if x % 3 == 0 {
-        print("Ваше число делится на 3 без остатка!")
+        return true
     }
     else {
-        print("Ваше число делится на 3 с остатком!")
+        return false
     }
 }
 
-divisionWithoutRemainded()
+isDividedByThree(x:-3)
 // Вариант 2.
 
 // Lesson 3. Создать возрастающий массив из 100 чисел.
@@ -47,22 +44,14 @@ print(array)
 */
 // Lesson 4. Удалить из этого массива все четные числа и все числа, которые не делятся на 3.
 // Вариант 1. Старался сделать без метода Filter!
-var array1:[Int] = []
-for i in array {
-    if  i % 2 != 0 && i % 3 != 0{
-        array1.append(i)
-    }
-}
-array = array1
-print(array)
 
 // Вариант 2. В 2ух вариантах.
 
-let array2 = array.filter{ i in i % 2 != 0 && i % 3 != 0}
-array = array2
+array = array.filter{ i in !isEven(number: i) && !isDividedByThree(x: i)}
+//array = array2
 
-let array3 = array.filter{ $0 % 2 != 0 && $0 % 3 != 0}
-array = array3
+//let array3 = array.filter{ $0 % 2 != 0 && $0 % 3 != 0}
+//array = array3
 print(array)
 
 
@@ -84,18 +73,22 @@ print(array)
 // lesson 5. * Написать функцию, которая добавляет в массив новое число Фибоначчи, и добавить при помощи нее 50 элементов. Числа Фибоначчи определяются соотношениями Fn=Fn-1 + Fn-2.
 // Вариант 1. Я не пробывал на 50 т.к. боюсь что комп не вытянет.
 
-var fib1 = 1
-var fib2 = 0
-func fibonacci() {
-for i in 1...50 {
-    var x = fib1
-    fib1 = fib2 + fib1
-    fib2 = x
-   print(x)
-}
+
+func get50FibonacciNums() -> [Int] {
+    var array:[Int] = []
+    var fib1 = 1
+    var fib2 = 0
+    for _ in 1...50 {
+        let tmp = fib1
+        fib1 += fib2
+        fib2 = tmp
+        array.append(fib1)
+    }
+    return array
 }
  
-fibonacci()
+var fibArray = get50FibonacciNums()
+print(fibArray)
 
 
 /* lesson 6. * Заполнить массив из 100 элементов различными простыми числами. Натуральное число, большее единицы, называется простым, если оно делится только на себя и на единицу. Для нахождения всех простых чисел не больше заданного числа n, следуя методу Эратосфена, нужно выполнить следующие шаги:
