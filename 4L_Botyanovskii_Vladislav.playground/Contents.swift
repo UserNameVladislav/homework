@@ -35,7 +35,7 @@ enum Type: String {
     case sport = "спортивный автомобиль автомобиль"
 }
 class car {
-    let transmission: Bool
+    var transmission: Bool
     var speedMax = 0
     var speedNow = 0
     
@@ -47,9 +47,9 @@ class car {
     
     var overspeed = 0
     func speedLimit() {
-        if speedNow <= 120 {
+        if speedNow >= 100 {
             overspeed += 1
-            print("Вы привысили скоростной режим \(overspeed) раз.")
+            print("Вы привысили скоростной режим в 100 км, \(overspeed) раз.")
         } else {
             print("Скоростной режим в норме.")
         }
@@ -57,39 +57,85 @@ class car {
 }
 
 class trunkcar: car {
-    let type: Type = .trucks
-    let brand: Brand = .Volvo
+    var type: Type = .trucks
+    var brand: Brand = .Volvo
     let trunkvolumemax = 20000
     let numberofwheels = 14
     let long = 15
-    let trailer = true
-    let somitrailer = false
+    var trailer: Bool
+    var somitrailer: Bool
     var windows: Windowstate = .close
     var engine: Engine = .drownout
     
-    ov
+    
+    init(type: Type, brand: Brand, trailer: Bool, somitrailer: Bool, windows: Windowstate, engine: Engine,
+         speedMax: Int, speedNow: Int, transmission: Bool  ) {
+        self.type = type
+        self.brand = brand
+        self.trailer = trailer
+        self.somitrailer = somitrailer
+        self.windows = windows
+        self.engine = engine
+        super.init(speedMax:speedMax, speedNow:speedNow, transmission:transmission)
+    }
+    override func speedLimit() {
+        if speedNow > 90 {
+            overspeed += 1
+            print("Вы привысили скоростной режим в 90 км, \(overspeed) раз.")
+        } else {
+            print("Скоростной режим в норме.")
+        }
+    }
 }
 
 class sportcar: car {
-    let type: Type = .sport
-    let brand: Brand = .PORSHE
+    var type: Type = .sport
+    var brand: Brand = .PORSHE
     let trunkvolumemax = 2000
     let numberofwheels = 4
     let long = 5
-    let luke = true
+    var luke: Bool
     var windows: Windowstate = .open
     var engine: Engine = .launch
     
-        func startDVS() -> Int{
-        var start = 0
-        if engine == .launch {
-            start += 1
-        }
-        return start
+    init(type: Type, brand: Brand, luke: Bool, windows: Windowstate, engine: Engine,
+         speedMax: Int, speedNow: Int, transmission: Bool) {
+        self.type = type
+        self.brand = brand
+        self.luke = luke
+        self.windows = windows
+        self.engine = engine
+        super.init(speedMax:speedMax, speedNow:speedNow, transmission:transmission)
     }
     
-    
+    override func speedLimit() {
+        if speedNow > 120 {
+            overspeed += 1
+            print("Вы привысили скоростной режим в 120 км, \(overspeed) раз.")
+        } else {
+            print("Скоростной режим в норме.")
+        }
+    }
 }
 
+var firstCar = car(speedMax: 200, speedNow: 90, transmission: true)
+var carPorsh = sportcar(type: .sport, brand: .PORSHE, luke: true, windows: .close, engine: .launch, speedMax: 360, speedNow: 180, transmission: true)
+var carAudi = sportcar(type: .sport, brand: .AUDI, luke: false, windows: .close, engine: .launch, speedMax: 320, speedNow: 100, transmission: true)
+var carVolvo = trunkcar(type: .trucks, brand: .Volvo, trailer: true, somitrailer: false, windows: .open, engine: .launch, speedMax: 200, speedNow: 90, transmission: true)
+var carReno = trunkcar(type: .trucks, brand: .Reno, trailer: false, somitrailer: true, windows: .open, engine: .launch, speedMax: 200, speedNow: 120, transmission: false)
 
+print("""
+Характеристики:
+Тип авто: \(carPorsh.type)
+Бренд: \(carPorsh.brand)
+Наличие люка: \(carPorsh.luke)
+Статус стекл: \(carPorsh.windows)
+Статус двигателя: \(carPorsh.engine)
+Максимальная скорость: \(carPorsh.speedMax)
+Текущая скорость: \(carPorsh.speedNow)
+""")
+carPorsh.speedLimit()
+carVolvo.speedLimit()
+carReno.speedLimit()
+carAudi.speedLimit()
 
