@@ -34,15 +34,12 @@ class Queue<T: Person>{
     func map(_ clouser: (T)) -> [T] {
         return array.map{$0}
     }
+    // ЕЩЕ пишу не успеваю сделать! обязательно сделаю отправлю
     subscript(indices: UInt ...) -> Double {
-           var weight = 0.0
-           for index in indices where index < self.array.count {
-               weight += self.array[Int(index)].weight
-           }
-           return weight
-       }
-    
+        for index in indices where index > self.array.count {
+          ACTION(index)
+        }
+        return
 }
-
-
+}
 
