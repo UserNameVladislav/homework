@@ -34,28 +34,31 @@ class Shop {
         return deposit
     }
     
-    func sale(buything name: String) -> (Product?, Error404?) {
+    func sale(buything name: String) throws -> Product? {
         guard let item = inventory[name] else {
-            return (nil, Error404.invalidSelection)
+            throw Error404.invalidSelection
         }
         guard item.amount > 0 else {
-            return (nil, Error404.notAvailable)
+            throw Error404.notAvailable
         }
         guard item.price <= deposit else {
-            return (nil, Error404.insufficientFunds)
+            throw Error404.insufficientFunds
         }
         deposit -= item.price
                var newItem = item
                newItem.amount -= 1
                inventory[name] = newItem
-               return (newItem.product, nil)
+               return newItem.product
     }
 }
 
 let TShop = Shop()
-TShop.money(name: 200)
-TShop.sale(buything: "Shoes")
-TShop.sale(buything: "JAKETS")
+TShop.money(name: 25)
+do {
+    let sell = try TShop.sale(buything: "Shoes")
+    let sellTwo = try TShop.sale(buything: "Jeans")
+} catch let error {
+    print("Недостаточно средств!")
+}
 
-
-
+// Ругается на инициализацию SELL SELLTWO ( делал по методичке ) 
