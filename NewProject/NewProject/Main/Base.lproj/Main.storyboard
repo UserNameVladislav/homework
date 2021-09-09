@@ -20,35 +20,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="TpW-dt-W8P">
-                                <rect key="frame" x="30" y="160" width="368" height="108"/>
+                                <rect key="frame" x="50" y="409" width="328" height="108"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Lhr-uN-oxH">
-                                        <rect key="frame" x="0.0" y="0.0" width="368" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="328" height="34"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyn-nk-3R5">
-                                                <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KfW-b3-3MZ">
-                                                <rect key="frame" x="109.66666666666666" y="0.0" width="258.33333333333337" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KfW-b3-3MZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="328" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="u4j-cx-cqC">
-                                        <rect key="frame" x="0.0" y="74" width="368" height="34"/>
+                                        <rect key="frame" x="0.0" y="74" width="328" height="34"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="th9-ro-dBe">
-                                                <rect key="frame" x="0.0" y="0.0" width="104" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5pl-lS-ECE">
-                                                <rect key="frame" x="109" y="0.0" width="259" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5pl-lS-ECE">
+                                                <rect key="frame" x="0.0" y="0.0" width="328" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -57,19 +45,21 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAe-nQ-ouN">
-                                <rect key="frame" x="185" y="60" width="58.333333333333343" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <rect key="frame" x="160" y="267.33333333333331" width="108" height="101.66666666666669"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="85"/>
                                 <color key="textColor" red="0.89970347989999999" green="0.67516709230000005" blue="0.001557929273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.90346521140000002" green="0.6034312248" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="2" height="0.0"/>
+                                <color key="shadowColor" red="1" green="0.71262007174567887" blue="0.094128824974622494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="3" height="0.0"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQO-XA-teX">
-                                <rect key="frame" x="184" y="318" width="60" height="42"/>
+                                <rect key="frame" x="181" y="557" width="66" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <size key="titleShadowOffset" width="0.0" height="-2"/>
-                                <state key="normal" title="Login">
+                                <color key="tintColor" red="1" green="0.71812683340000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="titleShadowOffset" width="1" height="0.0"/>
+                                <state key="normal" title="Log in">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="LoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3c5-ql-iUo"/>
@@ -81,16 +71,15 @@
                         <constraints>
                             <constraint firstItem="lju-lU-tc6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7yF-gJ-LB5"/>
                             <constraint firstItem="lju-lU-tc6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="I17-tJ-XUj"/>
-                            <constraint firstItem="RAe-nQ-ouN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NnK-df-aLP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TpW-dt-W8P" secondAttribute="trailing" constant="30" id="Wnt-nS-LIn"/>
+                            <constraint firstItem="jQO-XA-teX" firstAttribute="top" secondItem="TpW-dt-W8P" secondAttribute="bottom" constant="40" id="SNd-nb-DB8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TpW-dt-W8P" secondAttribute="trailing" constant="50" id="Wnt-nS-LIn"/>
                             <constraint firstAttribute="bottom" secondItem="lju-lU-tc6" secondAttribute="bottom" id="Xw8-g5-EVH"/>
                             <constraint firstAttribute="trailing" secondItem="lju-lU-tc6" secondAttribute="trailing" id="Z3Y-Y1-bQs"/>
-                            <constraint firstItem="RAe-nQ-ouN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="ZgB-0I-to6"/>
-                            <constraint firstItem="TpW-dt-W8P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="eGj-KX-I9f"/>
-                            <constraint firstItem="jQO-XA-teX" firstAttribute="top" secondItem="TpW-dt-W8P" secondAttribute="bottom" constant="50" id="fBM-y6-G6o"/>
-                            <constraint firstItem="jQO-XA-teX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="log-zF-tfn"/>
-                            <constraint firstItem="TpW-dt-W8P" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sGf-iz-jLc"/>
-                            <constraint firstItem="TpW-dt-W8P" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="160" id="xca-xo-g0B"/>
+                            <constraint firstItem="TpW-dt-W8P" firstAttribute="top" secondItem="RAe-nQ-ouN" secondAttribute="bottom" constant="40" id="bQw-Wa-ttA"/>
+                            <constraint firstItem="TpW-dt-W8P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="eGj-KX-I9f"/>
+                            <constraint firstItem="RAe-nQ-ouN" firstAttribute="centerX" secondItem="TpW-dt-W8P" secondAttribute="centerX" id="ijQ-mT-uk9"/>
+                            <constraint firstItem="jQO-XA-teX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wYQ-kQ-7XB"/>
+                            <constraint firstItem="TpW-dt-W8P" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xca-xo-g0B"/>
                         </constraints>
                     </view>
                     <connections>
@@ -100,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-24.615384615384613" y="60.426540284360186"/>
+            <point key="canvasLocation" x="-25.269978401727865" y="58.878504672897193"/>
         </scene>
     </scenes>
     <resources>
