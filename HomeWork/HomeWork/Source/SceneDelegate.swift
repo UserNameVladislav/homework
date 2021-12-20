@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  NewProject
+//  HomeWork
 //
-//  Created by Vladislav Alexandrovich on 7.09.21.
+//  Created by Vladislav Alexandrovich on 14.12.21.
 //
 
 import UIKit
