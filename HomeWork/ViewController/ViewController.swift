@@ -17,13 +17,14 @@ class ViewController: UIViewController {
     @IBAction func LoginPressButton(_ sender: Any) {
         print(UserNameTextField.text)
         print(PasswordTextField.text)
-        if !userCheck() {
-            presentAlert()
-        }
         
     }
     
-
+    
+    @IBAction func unwindToMain(unwindSegue: UIStoryboardSegue) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,12 +110,25 @@ class ViewController: UIViewController {
         self.scrollView?.endEditing(true)
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        userCheck()
+        switch identifier {
+        case "GoToMain":
+            if !userCheck() {
+                presentAlert()
+                return false
+            } else {
+                cleadData()
+                return true
+            }
+        default:
+            return false
+        }
+        
     }
     // MARK: Private methodts
     private func userCheck() -> Bool {
         UserNameTextField.text == "admin" && PasswordTextField.text == "1234"
     }
+    
     private func presentAlert() {
         let alertController = UIAlertController(
             title: "Error",
@@ -123,6 +137,10 @@ class ViewController: UIViewController {
         let action = UIAlertAction(title: "Close", style: .cancel)
         alertController.addAction(action)
         present(alertController, animated: true)
+    }
+    private func cleadData() {
+        UserNameTextField.text = ""
+        PasswordTextField.text = ""
     }
 }
 
