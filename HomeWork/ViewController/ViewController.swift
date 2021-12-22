@@ -17,10 +17,14 @@ class ViewController: UIViewController {
     @IBAction func LoginPressButton(_ sender: Any) {
         print(UserNameTextField.text)
         print(PasswordTextField.text)
+        if !userCheck() {
+            presentAlert()
+        }
+        
     }
     
 
-    
+    // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView
@@ -66,7 +70,7 @@ class ViewController: UIViewController {
             object: nil)
     }
     
-    
+    // MARK: - Actions
     @objc func keyboardWasShown(notification: Notification) {
         let info = notification.userInfo! as NSDictionary
         let kbSize = (info.value(forKey: UIResponder.keyboardFrameEndUserInfoKey) as! NSValue)
@@ -104,6 +108,21 @@ class ViewController: UIViewController {
     @objc func hideKeyboard() {
         self.scrollView?.endEditing(true)
     }
-    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        userCheck()
+    }
+    // MARK: Private methodts
+    private func userCheck() -> Bool {
+        UserNameTextField.text == "admin" && PasswordTextField.text == "1234"
+    }
+    private func presentAlert() {
+        let alertController = UIAlertController(
+            title: "Error",
+            message: "Incorrect UserName or Password",
+            preferredStyle: .actionSheet)
+        let action = UIAlertAction(title: "Close", style: .cancel)
+        alertController.addAction(action)
+        present(alertController, animated: true)
+    }
 }
 

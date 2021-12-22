@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D98CC53D27692C9B00189220 /* HomeWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D98CC53D27692C9B00189220 /* VKONTAKTE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKONTAKTE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D98CC54027692C9B00189220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D98CC54227692C9B00189220 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D98CC54427692C9B00189220 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		D98CC53E27692C9B00189220 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D98CC53D27692C9B00189220 /* HomeWork.app */,
+				D98CC53D27692C9B00189220 /* VKONTAKTE.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,9 +94,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D98CC53C27692C9B00189220 /* HomeWork */ = {
+		D98CC53C27692C9B00189220 /* VKONTAKTE */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D98CC55127692C9D00189220 /* Build configuration list for PBXNativeTarget "HomeWork" */;
+			buildConfigurationList = D98CC55127692C9D00189220 /* Build configuration list for PBXNativeTarget "VKONTAKTE" */;
 			buildPhases = (
 				D98CC53927692C9B00189220 /* Sources */,
 				D98CC53A27692C9B00189220 /* Frameworks */,
@@ -106,9 +106,9 @@
 			);
 			dependencies = (
 			);
-			name = HomeWork;
+			name = VKONTAKTE;
 			productName = HomeWork;
-			productReference = D98CC53D27692C9B00189220 /* HomeWork.app */;
+			productReference = D98CC53D27692C9B00189220 /* VKONTAKTE.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +125,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D98CC53827692C9B00189220 /* Build configuration list for PBXProject "HomeWork" */;
+			buildConfigurationList = D98CC53827692C9B00189220 /* Build configuration list for PBXProject "VKONTAKTE" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -138,7 +138,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D98CC53C27692C9B00189220 /* HomeWork */,
+				D98CC53C27692C9B00189220 /* VKONTAKTE */,
 			);
 		};
 /* End PBXProject section */
@@ -344,7 +344,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D98CC53827692C9B00189220 /* Build configuration list for PBXProject "HomeWork" */ = {
+		D98CC53827692C9B00189220 /* Build configuration list for PBXProject "VKONTAKTE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D98CC54F27692C9D00189220 /* Debug */,
@@ -353,7 +353,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D98CC55127692C9D00189220 /* Build configuration list for PBXNativeTarget "HomeWork" */ = {
+		D98CC55127692C9D00189220 /* Build configuration list for PBXNativeTarget "VKONTAKTE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D98CC55227692C9D00189220 /* Debug */,
